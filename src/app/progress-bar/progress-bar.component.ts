@@ -27,7 +27,7 @@ export class ProgressBarComponent implements OnInit {
     this.rotate1 = 'rotate(' + porcentaje + 'deg)';
     this.topColor1 = 'linear-gradient(0deg, ' + this.topColor + ' 50%,  transparent 50%)'
     this.bgColor2 = 'linear-gradient(0deg, ' + this.bgColor + ' 50%, transparent 50%)';
-    this.bgColor3 = 'linear-gradient(' + this.bgColor + ' 50%, transparent 50%) content-box';
+    this.bgColor3 = 'linear-gradient(' + this.bgColor + ' 50%, ' + this.bgColor + ' 50%) content-box';
   }
   progress(percent) {
     return percent / 100 * 180;
