@@ -1,13 +1,20 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
 <app-progress-bar
-[percent]="90"
-[skill]="'HTML'"
+[percent]="60"
+[skill]="'Angular'"
 [topColor]="'rgba(0,150,136,1)'"
 [endColor]="'rgba(242,177,0,.2)'"
 [color]="'black'"
 [bgColor]="'white'"
   ></app-progress-bar>
-<div style="padding: 0px; background: black">
-</div>
+  <div style="padding: 20px;background: black">
+      <app-progress-bar
+      [percent]="50"
+      [skill]="'Angular'"
+      [topColor]="'red'"
+      [endColor]="'rgba(255,255,255,.7)'"
+      [color]="'white'"
+      [bgColor]="'black'"
+        ></app-progress-bar>
+  </div>
 </div>
