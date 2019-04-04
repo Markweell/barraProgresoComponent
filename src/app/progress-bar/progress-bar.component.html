@@ -1,0 +1,10 @@
+<div class="circuloPadre" [ngStyle]="{'background': bgColorPadre }">
+  <div class="circuloHijo1" [ngStyle]="{'background': topColor1, 'transform':rotate1 }">
+  </div>
+  <div class="circuloHijo2" [ngStyle]="{'background': bgColor2 }">
+  </div>
+  <div class="circuloHijo3" [style.color]="color" [ngStyle]="{'background': bgColor3 }">
+    <span>{{ skill }}</span>
+    <span class="percent">{{ percent }}%</span>
+  </div>
+</div>
