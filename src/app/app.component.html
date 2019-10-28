@@ -1,20 +1,24 @@
 <div class="container">
-<app-progress-bar
-[percent]="60"
-[skill]="'Angular'"
-[topColor]="'rgba(0,150,136,1)'"
-[endColor]="'rgba(242,177,0,.2)'"
-[color]="'black'"
-[bgColor]="'white'"
-  ></app-progress-bar>
-  <div style="padding: 20px;background: black">
-      <app-progress-bar
-      [percent]="50"
-      [skill]="'Angular'"
-      [topColor]="'red'"
-      [endColor]="'rgba(255,255,255,.7)'"
-      [color]="'white'"
-      [bgColor]="'black'"
-        ></app-progress-bar>
-  </div>
+  <form [formGroup]="progressBarForm" class='progressBarForm' click='showAll'>
+    <label for="percent">Porcentaje</label>
+    <input id="percent" type="number" placeholder="Porcentaje" formControlName="percent">
+    <label for="skill">Habilidad</label>
+    <input id='skill' type="text" placeholder="Habilidad" formControlName="skill">
+    <label for="topColor">Color arriba</label>
+    <input id='topColor' type="color" placeholder="Color arriba" formControlName="topColor">
+    <label for="endColor">Color Final</label>
+    <input id='endColor' type="color" placeholder="Color Final" formControlName="endColor">
+    <label for="color">Color de la letra</label>
+    <input id='color' type="color" placeholder="Color de la letra" formControlName="color">
+    <label for="bgColor">Color de fondo</label>
+    <input id='bgColor' type="color" placeholder="Color de fondo" formControlName="bgColor">
+  </form>
+
+  <app-progress-bar
+  [percent]="percent ? percent : 50"
+  [skill]="skill ? skill : 'Angular'"
+  [topColor]="topColor ? topColor : 'rgba(0,150,136,1)'"
+  [endColor]=" endColor ? endColor : 'rgba(242,177,0,.2)'"
+  [color]="color ? color : 'black'"
+  [bgColor]="bgColor ? bgColor : 'white'"></app-progress-bar>
 </div>
